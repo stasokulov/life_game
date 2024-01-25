@@ -264,7 +264,7 @@ const revive = () => {
     const endRenderTime = Date.now();
     setAverageRenderTime(endRenderTime - startRenderTime);
 
-    setTimeout(revive, 1000);
+    setTimeout(revive, 300);
 }
 
 const setPause = () => {

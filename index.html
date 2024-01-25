@@ -7,20 +7,31 @@
     <title>Игра "Жизнь"</title>
 </head>
 <body>
-    <input id="size-input" type="number" min="1" max="100" value="100">
-    <button id="build-button">Построить</button>
-    <button id="auto-plant-button">Засеять случайным образом</button>
-    <button id="revive-button">Оживить</button>
-    <button id="pause-button">Пауза</button>
-    <button id="clear-button">Очистить</button>
+    <h1>Игра "Жизнь"</h1>
+    <p>
+        <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB">
+            Правила смотри тут
+        </a>
+    </p>
+    <p>
+        Размер поля
+        <input id="size-input" type="number" min="1" max="100" value="30">
+        (введи число и нажми "Построить")
+    </p>
+    <p>Засели поле кликая по нему мышкой или нажми "Засеять". Кнопка "Оживить" запускает игру.</p>
+    <p>
+        <button id="build-button">Построить</button>
+        <button id="auto-plant-button">Засеять случайным образом</button>
+        <button id="revive-button">Оживить</button>
+        <button id="pause-button">Пауза</button>
+        <button id="clear-button">Очистить</button>
+    </p>
     <div>Среднее время подсчета соседей = <span id="average-calculation-time-1">0</span> миллисекунд</div>
     <div>Среднее время вычисления жизни = <span id="average-calculation-time-2">0</span> миллисекунд</div>
     <div>Среднее время отрисовки кадра = <span id="average-render-time">0</span> миллисекунд</div>
 
     <div class="field-wrap">
         <div class="field">
-            <div class="row">
-            </div>
         </div>
     </div>
 
