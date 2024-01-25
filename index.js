@@ -164,6 +164,7 @@ const plantMatrix = (id) => {
     if (!matrix.length) {
         showError('Матрица пуста');
     }
+    matrix[id].oldIsLive = matrix[id].isLive;
     matrix[id].isLive = !matrix[id].isLive;
 };
 
@@ -171,22 +172,19 @@ const plantField = () => {
     let liveCounter = 0;
 
     matrix.forEach((cell) => {
-        if (cell.isLive === cell.oldIsLive) {
-            return
-        };
+        if (cell.isLive) liveCounter++;
+
+        if (cell.isLive === cell.oldIsLive) return;
 
         const cellNode = document.getElementById(cell.id);
         if (cell.isLive) {
             cellNode.classList.add('isLive');
-            liveCounter++;
         } else {
             cellNode.classList.remove('isLive');
         };
     });
 
-    if (liveCounter  === 0) {
-        setPause();
-    };
+    if (liveCounter  === 0) setPause();
 };
 
 const autoPlantField = () => {
