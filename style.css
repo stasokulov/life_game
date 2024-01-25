@@ -1,0 +1,22 @@
+.field-wrap {
+    display: flex;
+}
+
+.field {
+    border: solid 1px black;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    height: 20px;
+    width: 20px;
+    border: solid 1px black;
+    background-color: gray;
+}
+
+.isLive {
+    background-color: black;
+}
